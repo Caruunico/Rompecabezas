@@ -71,8 +71,31 @@ li::before {
   border: rgb(31, 161, 201) 0.01px solid;
 }
 #objetivo img{
-  width: 70%;
-  
+  width: 60%;  
+}
+#titulo{
+  letter-spacing: 10px;
+  font-size: 120%;
+  font-weight: bold;
+  background-color: rgb(218, 85, 85);
+  color: #fff;
+  padding-left: 5%;
+  text-align: center;
 }
 
-
+#instrucciones{
+  color:  rgb(218, 85, 85) ;
+  font-size: 120%;
+}
+#instrucciones li{
+  color:#000;
+  font-size: 80%;
+}
+#objetivo{
+  color:  rgb(218, 85, 85) ;
+  font-size: 120%;
+}
+#ultimo-mov{
+  color:  rgb(218, 85, 85) ;
+  font-size: 120%;
+}
