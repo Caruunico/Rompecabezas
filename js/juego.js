@@ -44,16 +44,18 @@ function agregarUltimoMovimiento(direccion){
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora. 
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
-    for( i=0 ; i<grilla.length;i++){
-      for( j=0 ; j<grilla.length;j++){
+    for( i=0 ; i<grilla.length; i++){
+      for( j=0 ; j<grilla.length; j++){
+
         var actual = grilla[i][j];
-        if (actual === correcta[i][j]){
+
+        if (actual !== correcta[i][j]){
           console.log(actual);
-          return true;
+          return false;
         }
       }
     }
-    return false;
+    return true;
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
@@ -77,12 +79,13 @@ function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
 
 // Para chequear si la posición está dentro de la grilla.
 function posicionValida(fila, columna) {
-      if(fila<grilla.length && columna <grilla.length){
-        return true;
-      }else{
-        return false;
-      }
+  if (fila >= 0 && fila <= 2 && columna >= 0 && columna <= 2){
+    return true;
+  }else{
+    return false;
+  }
 }
+
 
 /* Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando su posición con otro elemento.
 Las direcciones están dadas por números que representa: arriba (38), abajo (40), izquierda (37), derecha (39) */
@@ -92,13 +95,13 @@ function moverEnDireccion(direccion) {
 
   // Mueve pieza hacia la abajo, reemplazandola con la blanca
   if (direccion === codigosDireccion.ABAJO) {
-    nuevaFilaPiezaVacia = filaVacia - 1;
+    nuevaFilaPiezaVacia = filaVacia + 1;
     nuevaColumnaPiezaVacia = columnaVacia;
   }
     
   // Mueve pieza hacia arriba, reemplazandola con la blanca
   else if (direccion === codigosDireccion.ARRIBA) {
-    nuevaFilaPiezaVacia = filaVacia + 1;
+    nuevaFilaPiezaVacia = filaVacia - 1;
     nuevaColumnaPiezaVacia = columnaVacia;
   }
     
@@ -123,9 +126,7 @@ function moverEnDireccion(direccion) {
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
   //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
-  movimientos.push(direccion);
   actualizarUltimoMovimiento(direccion);
-
     }
 }
 
@@ -165,6 +166,11 @@ Se te ocurre cómo solucionar esto con una variable temporal?
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2){
   var pieza1 = grilla[filaPos1][columnaPos1];
   var pieza2 = grilla[filaPos2][columnaPos2];
+
+  grilla[filaPos1][columnaPos1] = pieza2;
+  grilla[filaPos2][columnaPos2] = pieza1;
+
+  
 }
 
 /* Funcion que realiza el intercambio logico (en la grilla) y ademas actualiza

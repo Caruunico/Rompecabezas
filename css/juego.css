@@ -67,6 +67,7 @@ li::before {
 .col-60 .container img{
   display: flex;
   width: 33%;
+  height: 33%;
   float:left;
   border: rgb(31, 161, 201) 0.01px solid;
 }
