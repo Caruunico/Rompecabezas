@@ -252,7 +252,7 @@ function mezclarPiezas(veces) {
 
   setTimeout(function() {
       mezclarPiezas(veces - 1);
-    }, 100);
+    }, 150);
 }
 
 /* capturarTeclas: Esta función captura las teclas presionadas por el usuario. Javascript
@@ -290,6 +290,7 @@ function iniciar() {
     mostrarInstrucciones(instrucciones);
     // mezclarPiezas(30);
     capturarTeclas();
+    mezclarPiezas(40);
 }
 
 // Ejecutamos la función iniciar
