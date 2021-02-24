@@ -1,10 +1,9 @@
-/*Código armado por La Foca Loca S.A. No modificar*/
 body {
   font-family: Arial, sans-serif;
   width: 940px;
   margin: 5% auto;
   min-height: 100%;
-  background-image: url(../images/adventure.jpg);
+  background-image: url(../images/fondo.jpg);
 }
 ul {
   padding-left: 0;
@@ -16,12 +15,12 @@ li {
 }
 li::before {
   content: "• ";
-  color: #EC6778;
+  color: rgba(45, 113, 190, 0.397);
 }
 
 .col-40 h1 {
   font-size: 20px;
-  color: #E84A5F;
+  color: rgb(45, 113, 190);
 }
 
 .col-40, .col-60 {
@@ -30,9 +29,10 @@ li::before {
   vertical-align: top;
 }
 .col-40 {
-  background: #FFF;
+  background: rgb(207, 238, 243);
   padding: 30px;
   color: #000;
+  align-items: center;
 }
 
 .col-60 {
@@ -69,24 +69,24 @@ li::before {
   width: 33%;
   height: 33%;
   float:left;
-  border: rgb(31, 161, 201) 0.01px solid;
+  border: rgb(255, 255, 255) 0.01px solid;
 }
 #objetivo img{
   width: 50%;  
 }
 #titulo{
   margin-top: -1%;
-  letter-spacing: 10px;
-  font-size: 120%;
+  letter-spacing: 3px;
+  font-size: 148%;
   font-weight: bold;
-  background-color: rgb(218, 85, 85);
-  color: #fff;
+  color: rgb(45, 113, 190);
   padding-left: 5%;
   text-align: center;
+  border-radius: 5px;
 }
 
 #instrucciones{
-  color:  rgb(218, 85, 85) ;
+  color:  rgb(45, 113, 190) ;
   font-size: 120%;
 }
 #instrucciones li{
@@ -94,21 +94,28 @@ li::before {
   font-size: 80%;
 }
 #objetivo{
-  color:  rgb(218, 85, 85) ;
+  color: rgb(45, 113, 190) ;
   font-size: 120%;
 }
 #ultimo-mov{
-  color:  rgb(218, 85, 85) ;
+  color:  rgb(45, 113, 190) ;
   font-size: 120%;
 }
 button {
   display: flex;
   width: 50%;
-  background-color:rgb(31, 161, 201);
+  background-color:rgb(240, 86, 86);
   height: 15%;
   justify-content: center;
   border-radius: 5px;
   color: #FFF;
   font-weight: bold;
-  align-items: center;
+  font-size: 20px;
+  margin-left: 25%;
+  border-color: rgb(240, 86, 86);
+}
+#footer{
+  display: flex;
+  color:white;
+  justify-content: flex-end;  
 }
